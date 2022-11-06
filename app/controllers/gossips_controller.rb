@@ -15,7 +15,7 @@ class GossipsController < ApplicationController
         user = User.find(1)
 
         @gossip = Gossip.new(title: params[:title], content: params[:content], user_id: user.id)
-     
+        puts "Hello"
         if @gossip.save
           redirect_to :action => "index"
         else
